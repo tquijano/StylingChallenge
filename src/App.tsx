@@ -1,35 +1,57 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import { Button, Card, Facts } from "./components";
+import styles from "./App.module.scss";
 
-function App() {
-  const [count, setCount] = useState(0)
-
+const App = () => {
+  type DataDummyProps = {
+    card?: "default" | "border";
+    button?: "default" | "icon";
+    textButton: string;
+  };
+  const dataDummy: DataDummyProps[] = [
+    {
+      button: "icon",
+      textButton: "This is a two line button that terminates with",
+    },
+    {
+      textButton: "This is a two line button that terminates with",
+    },
+    {
+      button: "icon",
+      textButton: "This is a two line button that terminates with",
+    },
+    {
+      button: "icon",
+      textButton: "This is a two line button that terminates with",
+    },
+    {
+      card: "border",
+      button: "icon",
+      textButton: "This is a two line button that terminates with",
+    },
+    {
+      card: "border",
+      button: "icon",
+      textButton: "This is a two line button that terminates with",
+    },
+    {
+      card: "border",
+      button: "icon",
+      textButton: "This is a two line button that terminates with",
+    },
+  ];
   return (
-    <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
+    <section className={styles.mainTemplate}>
+      <div className={styles.mainTemplate_container}>
+        <Facts>
+          {dataDummy.map(({ card, button, textButton }) => (
+            <Card variant={card}>
+              <Button variant={button} label={textButton} />
+            </Card>
+          ))}
+        </Facts>
       </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
-  )
-}
+    </section>
+  );
+};
 
-export default App
+export default App;

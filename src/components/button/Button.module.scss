@@ -1,0 +1,44 @@
+@import '../../sass/theme.scss';
+
+button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1.6rem;
+  background-color: $primary;
+  border: 0.2rem solid transparent;
+  border-radius: 5rem ;
+  cursor: pointer;
+  padding: 1.1rem 3.3rem;
+  font-size: 1.9rem; 
+  font-weight: 500;
+  color: $white;
+  transition: border-color 0.25s;
+  
+  &:hover {
+    border: 0.2rem solid $white;
+    background: $secondary;
+  }
+}
+
+
+.default {
+  p{
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    -webkit-line-clamp: 1;
+  }
+}
+
+.icon {
+  p {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    -webkit-line-clamp: 2;
+    text-overflow: ellipsis;
+    text-align: left;
+  }
+}
+

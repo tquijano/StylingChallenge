@@ -1,0 +1,18 @@
+@import './sass/theme.scss';
+
+.mainTemplate {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.mainTemplate_container {
+  padding-top: 10rem;
+  width: 100%;
+  max-width: $max-width;
+  @media (max-width: 768px) {
+    max-width: $min-width;
+  }
+}
+
+
