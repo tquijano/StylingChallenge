@@ -6,14 +6,17 @@
   background: $white;
 }
 
-.default{
+.default {
   display: flex;
   justify-content: center;
   align-items: center;
-  &:hover{
+  &:hover {
     background: $secondary;
+    button:not(:disabled) {
+      border: 0.2rem solid $white;
+      background: $secondary;
+    }
   }
-  
 }
 
 .border {
@@ -21,7 +24,11 @@
   flex-direction: column;
   gap: 1.8rem;
   border: 1.5rem solid transparent;
-  &:hover{
+  &:hover {
     border-color: $secondary;
+    button:not(:disabled) {
+      border: 0.2rem solid $secondary;
+      background: $secondary;
+    }
   }
 }

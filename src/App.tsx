@@ -1,51 +1,19 @@
 import { Button, Card, Facts } from "./components";
+import { dataDummy } from "./utils";
 import styles from "./App.module.scss";
 
 const App = () => {
-  type DataDummyProps = {
-    card?: "default" | "border";
-    button?: "default" | "icon";
-    textButton: string;
-  };
-  const dataDummy: DataDummyProps[] = [
-    {
-      button: "icon",
-      textButton: "This is a two line button that terminates with",
-    },
-    {
-      textButton: "This is a two line button that terminates with",
-    },
-    {
-      button: "icon",
-      textButton: "This is a two line button that terminates with",
-    },
-    {
-      button: "icon",
-      textButton: "This is a two line button that terminates with",
-    },
-    {
-      card: "border",
-      button: "icon",
-      textButton: "This is a two line button that terminates with",
-    },
-    {
-      card: "border",
-      button: "icon",
-      textButton: "This is a two line button that terminates with",
-    },
-    {
-      card: "border",
-      button: "icon",
-      textButton: "This is a two line button that terminates with",
-    },
-  ];
   return (
     <section className={styles.mainTemplate}>
       <div className={styles.mainTemplate_container}>
         <Facts>
-          {dataDummy.map(({ card, button, textButton }) => (
-            <Card variant={card}>
-              <Button variant={button} label={textButton} />
+          {dataDummy.map(({ card, button, textButton }, index) => (
+            <Card variant={card} key={crypto.randomUUID()}>
+              <Button
+                variant={button}
+                label={textButton}
+                disabled={index === 5}
+              />
             </Card>
           ))}
         </Facts>

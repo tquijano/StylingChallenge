@@ -9,10 +9,8 @@
 .mainTemplate_container {
   padding-top: 10rem;
   width: 100%;
+  min-width: $min-width;
   max-width: $max-width;
-  @media (max-width: 768px) {
-    max-width: $min-width;
-  }
 }
 
 

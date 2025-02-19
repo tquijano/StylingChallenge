@@ -15,19 +15,22 @@ button {
   color: $white;
   transition: border-color 0.25s;
   
-  &:hover {
+  &:hover:not(:disabled) {
     border: 0.2rem solid $white;
     background: $secondary;
   }
+
+  &:disabled {
+    background: $tertiary;
+  }
 }
 
-
 .default {
-  p{
-    display: -webkit-box;
-    -webkit-box-orient: vertical;
+  padding: 2.3rem 3.3rem; 
+  overflow: hidden;
+  p {
+    white-space: nowrap;
     overflow: hidden;
-    -webkit-line-clamp: 1;
   }
 }
 

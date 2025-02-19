@@ -2,7 +2,7 @@ import { FC } from "react";
 import styles from "./Button.module.scss";
 
 type ButtonProps = {
-  label: string;
+  label?: string;
   variant?: "default" | "icon";
   icon?: string;
 } & React.ButtonHTMLAttributes<HTMLButtonElement>;

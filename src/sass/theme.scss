@@ -1,4 +1,4 @@
-//Xolor theme
+//Color theme
 
 $display: #1E1E1E;
 $primary:   #2D3E4E;
@@ -11,7 +11,3 @@ $white:   #FFFFFF;
 $min-width: 768px;
 $max-width: 1680px;
 
-// Function for scaling values proportionally
-@function responsive($min, $max) {
-  @return calc(#{$min} + (#{$max} - #{$min}) * ((100vw - #{$min-width}) / (#{$max-width} - #{$min-width})));
-}
