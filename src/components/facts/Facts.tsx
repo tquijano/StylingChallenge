@@ -9,6 +9,7 @@ type FactsProps = {
 export const Facts: FC<FactsProps> = ({ variant = "primary", children }) => {
   return (
     <div className={`${styles.facts} ${styles[`variant-${variant}`]}`}>
+      <div className={styles.close} />
       <h1>Firm Facts</h1>
       <hr />
       <div className={styles.container}>{children}</div>
