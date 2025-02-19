@@ -1,50 +1,48 @@
-# React + TypeScript + Vite
+# Styling Challenge
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This repo contains an implementation of the **Styling Challenge** using React with Vite, TypeScript and SCSS modules. The project is focused on achieving pixel-perfect design following the Figma disposed to, responsive layout, and styled components as specified in the challenge requirements.
 
-Currently, two official plugins are available:
+## Getting Started
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+### Prerequisites
+Ensure you have the following installed on your system:
+- **Node.js** (>= 18.x)
+- **Yarn** (>= 1.22.x)
 
-## Expanding the ESLint configuration
+### Installation
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/tquijano/StylingChallenge
+   cd StylingChallenge
+   ```
+2. Install dependencies:
+   ```bash
+   yarn install
+   ```
+3. Start the development server:
+   ```bash
+   yarn start
+   ```
+4. Open your browser and navigate to [Vite Dev port on localhost](http://localhost:5173) *http://localhost:5173*
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+## Expected Output
+Once the development server is running, you should see the Firm Facts component properly rendered and positioned on the page according to the provided design.
 
-- Configure the top-level `parserOptions` property like this:
+## Components
+1. Facts component:
+  - Implements a grid layout for cards.
+  - Centered horizontally and positioned 100px from the top.
+2. Card component:
+  - Variants:
+    + `default`: Changes background color on hover.
+    + `border`: Changes border color on hover.
+3. Button component:
+  - Variants:
+    + `default`: Single-line text, truncated without ellipsis.
+    + `icon`: icon: Includes an icon, supports one or two lines of text, truncates text with ellipsis.
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+## Styling
+- SCSS modules are used for styling all components.
+- Responsive scaling is applied between 768px and 1680px screen widths.
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
-
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
-
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
-```
+**Thank you for considering me for the application of this test. I truly appreciate the opportunity!**
